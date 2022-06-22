@@ -16,3 +16,6 @@ resource "github_repository" "terraform_basics" {
     visibility = "private"
   
 }
+
+
+##if you want to destroy your repo with terraform destroy you must have an admin access to your personal token (delete repo etc)
