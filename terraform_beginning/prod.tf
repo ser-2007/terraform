@@ -48,7 +48,7 @@ resource "aws_default_subnet" "default_az2" {
 
 resource "aws_security_group" "prod_web" {
   name        = "prod_web"
-  description = "Allow standard http and https, ports inbound, and everything outbound"
+  description = "Allow standard http and https,ports inbound, and everything outbound"
 
   ingress {
     from_port   = 80
