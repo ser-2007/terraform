@@ -15,3 +15,5 @@ resource "aws_db_instance" "default" {
   parameter_group_name = "default.mysql5.7"
   skip_final_snapshot  = true
 }
+
+#dont forget your iam user can access to rds
