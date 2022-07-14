@@ -1,4 +1,4 @@
-resource "aws_vpc" "ser_vpc" {
+resource "aws_vpc" "ser_vpc" { #ex. ser.vpc is important because you use it below
   cidr_block           = "10.123.0.0/16"
   enable_dns_hostnames = true
   enable_dns_support   = true
@@ -70,7 +70,6 @@ resource "aws_security_group" "ser_sg" {
 resource "aws_key_pair" "ser_auth" {
   key_name = "s"
   public_key = file("~/.ssh/s.pub") #your ssh-key path
-  
 }
 
 resource "aws_instance" "dev_node" {
@@ -82,6 +81,7 @@ resource "aws_instance" "dev_node" {
   user_data = file("userdata.tpl")
   root_block_device {
     volume_size = 10
+
   }
   tags = {
     "Name" = "dev-node"
