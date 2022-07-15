@@ -1,4 +1,4 @@
 variable "host_os" {
   type = string
-  default = "windows"
+  default = "windows" #you can change it to your os
 }
