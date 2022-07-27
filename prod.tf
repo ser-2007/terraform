@@ -75,7 +75,7 @@ resource "aws_security_group" "prod_web" {
 }
 
 module "web_app" {
-  source = "./modules/web_app"
+  source = "./modules/web_app" #source path
 
   web_image_id         = var.web_image_id
   web_instance_type    = var.web_instance_type
