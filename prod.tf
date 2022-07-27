@@ -19,7 +19,7 @@ variable "web_min_size" {
 
 provider "aws" {
   profile = "default"
-  region  = "us-west-2"
+  region  = "us-east-1"
 }
 
 resource "aws_s3_bucket" "prod_tf_course" {
@@ -33,14 +33,14 @@ resource "aws_s3_bucket" "prod_tf_course" {
 resource "aws_default_vpc" "default" {}
 
 resource "aws_default_subnet" "default_az1" {
-  availability_zone = "us-west-2a"
+  availability_zone = "us-east-1a"
   tags = {
     "Terraform" : "true"
   }
 }
 
 resource "aws_default_subnet" "default_az2" {
-  availability_zone = "us-west-2b"
+  availability_zone = "us-east-1b"
   tags = {
     "Terraform" : "true"
   }
